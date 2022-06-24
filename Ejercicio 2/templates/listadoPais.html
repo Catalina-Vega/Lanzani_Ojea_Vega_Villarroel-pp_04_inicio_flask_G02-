@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Total y per capita por país</title>
+  </head>
+  <body>
+    <header></header>
+    <table id="tablaListadoPais" border=2 valign=middle>
+      <tr>
+        <th>Pais</th>
+        <th>Tipo</th>
+        <th>Valor</th>
+      </tr>
+      {% for i in totalYPerCapitaPorPais %}
+      <tr>
+        <th>{{i[0]}}</th>
+        <th>{{i[1]}}</th>
+        <th>{{i[2]}}</th>
+      </tr>
+      {% endfor %}
+    </table>
+    <br>
+    <script>
+      function redireccionarAPaginaPrincipal(){
+        window.location.href="https://tp-4-flask-ejercicio-2.catalinavega6.repl.co/"
+      }
+    </script>
+    <button onclick="redireccionarAPaginaPrincipal()">Volver</button>
+  </body>
+</html>

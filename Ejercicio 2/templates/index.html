@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Inicio</title>
+  </head>
+  <body>
+    <header><h1>Emisiones estimadas de CO2</h1></header>
+    <script>
+      function redireccionarATopDiezPerCapita(){
+        window.location.href="https://tp-4-flask-ejercicio-2.catalinavega6.repl.co/listado"
+      }
+    </script>
+    <button onclick="redireccionarATopDiezPerCapita()">Top 10 per capita</button>
+    <br><br>
+    <script>
+      function redireccionarATopDiezTotal(){
+        window.location.href="https://tp-4-flask-ejercicio-2.catalinavega6.repl.co/listado/top"
+      }
+    </script>
+    <button onclick="redireccionarATopDiezTotal()">Top 10 total</button>
+    <br><br>
+    <label>Total y per capita por país:</label>
+    <br>
+    <input type="text" id="inputListadoPais" placeholder="Ingrese un país">
+    <script>
+      function buscarPais(){
+        paisParaBuscar = document.getElementById("inputListadoPais").value;
+        window.location.href=`https://tp-4-flask-ejercicio-2.catalinavega6.repl.co/listado/${paisParaBuscar}`;
+      }
+    </script>
+    <button onclick="buscarPais()">Buscar</button>
+    <br><br>
+    <script>
+      function redireccionarAAcercaDe(){
+        window.location.href="https://tp-4-flask-ejercicio-2.catalinavega6.repl.co/ayuda"
+      }
+    </script>
+    <button onclick="redireccionarAAcercaDe()">Acerca de...</button>
+  </body>
+</html>
